@@ -16,7 +16,6 @@ public class Post {
     @Id
     private String id;
     private String title;
-
     private String description;
     private String content;
 }
