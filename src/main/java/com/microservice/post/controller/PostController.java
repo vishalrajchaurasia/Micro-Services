@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/posts")
-public class PostController {//this is the post controller
+public class PostController {
     @Autowired
     private PostService postService;
 
