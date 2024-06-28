@@ -1,6 +1,7 @@
 package com.microservice.post.controller;
 
 import com.microservice.post.entity.Post;
+import com.microservice.post.payload.PostDto;
 import com.microservice.post.repository.PostRepository;
 import com.microservice.post.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,5 +25,8 @@ public class PostController {
     public Post getPostByPostId(@PathVariable String postId){//to find the post based on post id
         Post post = postService.findPostById(postId);
         return post;
+    }
+    public ResponseEntity<PostDto> getPostWithComments(@PathVariable String postId){
+       PostDto postDto = postService.getPostWithComments(postId);
     }
 }
