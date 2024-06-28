@@ -26,7 +26,10 @@ public class PostController {
         Post post = postService.findPostById(postId);
         return post;
     }
+    //http://localhost:8081/api/posts/{postId}/comments
+    @GetMapping("/{postId}/comments")
     public ResponseEntity<PostDto> getPostWithComments(@PathVariable String postId){
        PostDto postDto = postService.getPostWithComments(postId);
+       return new ResponseEntity<>(postDto,HttpStatus.OK);
     }
 }
