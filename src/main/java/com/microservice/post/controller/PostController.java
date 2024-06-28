@@ -14,11 +14,12 @@ public class PostController {
     @Autowired
     private PostService postService;
 
-    @PostMapping//
+    @PostMapping
     public ResponseEntity<Post> savePost(@RequestBody Post post) {
         Post newPost = postService.savePost(post);
         return new ResponseEntity<>(newPost, HttpStatus.CREATED);
     }
+    //http://localhost:8081/api/posts/{postId}
     @GetMapping("/{postId}")
     public Post getPostByPostId(@PathVariable String postId){//to find the post based on post id
         Post post = postService.findPostById(postId);
