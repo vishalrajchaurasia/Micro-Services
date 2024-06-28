@@ -1,6 +1,6 @@
 package com.microservice.post.payload;
 
-import jakarta.annotation.Nonnull;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
