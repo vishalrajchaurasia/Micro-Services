@@ -1,6 +1,7 @@
 package com.microservice.post.service;
 
 import com.microservice.post.entity.Post;
+import com.microservice.post.payload.PostDto;
 import com.microservice.post.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,5 +24,9 @@ public class PostService {
     public Post findPostById(String postId) {
         Post post = postRepository.findById(postId).get();
         return post;
+    }
+
+    public PostDto getPostWithComments(String postId) {
+
     }
 }
