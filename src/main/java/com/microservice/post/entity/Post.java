@@ -1,6 +1,6 @@
 package com.microservice.post.entity;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
