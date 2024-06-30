@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
+@AllArgsConstructor//
 public class Comment {//when you call that api i get the comment
     private String commentId;
     private String name;
