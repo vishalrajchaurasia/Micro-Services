@@ -33,7 +33,7 @@ public class PostService {
 
     public PostDto getPostWithComments(String postId) {
         Post post = postRepository.findById(postId).get();//this will directly give me post object
-        ArrayList comments = restTemplate.getRestTemplate().getForObject("http://localhost:8082/api/comments/" + postId, ArrayList.class);//it is return back is list means ArrayList.class
+        ArrayList comments = restTemplate.getRestTemplate().getForObject("http://COMMENT/api/comments/" + postId, ArrayList.class);//it is return back is list means ArrayList.class
         PostDto postDto = new PostDto();
         postDto.setPostId(post.getId());
         postDto.setTitle(post.getTitle());
