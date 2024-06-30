@@ -9,7 +9,7 @@ import javax.xml.stream.events.Comment;
 import java.util.List;
 @Data
 @NoArgsConstructor
-@AllArgsConstructor//
+@AllArgsConstructor
 public class PostDto {
     //what you want to return back
     //return back to postDetails
