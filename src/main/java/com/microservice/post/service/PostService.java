@@ -29,7 +29,7 @@ public class PostService {
     public Post findPostById(String postId) {
         Post post = postRepository.findById(postId).get();
         return post;
-    }
+    }//
 
     public PostDto getPostWithComments(String postId) {
         Post post = postRepository.findById(postId).get();//this will directly give me post object
