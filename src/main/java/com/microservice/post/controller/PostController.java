@@ -35,10 +35,11 @@ public class PostController {
        PostDto postDto = postService.getPostWithComments(postId);
        return new ResponseEntity<>(postDto,HttpStatus.OK);
     }
-    public ResponseEntity<PostDto> commentFallback(String postId,Exception ex){
+    public ResponseEntity<PostDto> commentFallback(String postId,Exception ex){//how to return dto ,create a dummy object for dummy information
         System.out.println("Fallback is executed because service is down : "+ ex.getMessage());
 
-        ex.printStackTrace();
+        ex.printStackTrace();//service down
+        //return back a dummy dto object
         PostDto dto = new PostDto();//create here a dummy data ,because return type a DTO object
         dto.setPostId("1234");
         dto.setTitle("Service Down");
