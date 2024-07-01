@@ -39,8 +39,8 @@ public class PostController {
         System.out.println("Fallback is executed because service is down : "+ ex.getMessage());
 
         ex.printStackTrace();
-        PostDto dto = new PostDto();
-        dto.setId("1234");
+        PostDto dto = new PostDto();//create here a dummy data ,because return type a DTO object
+        dto.setPostId("1234");
         dto.setTitle("Service Down");
         dto.setContent("Service Down");
         dto.setDescription("Service Down");
